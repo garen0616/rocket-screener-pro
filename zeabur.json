@@ -1,0 +1,19 @@
+{
+  "name": "rocket-screener-pro",
+  "project": "rocket-screener-pro",
+  "services": [
+    {
+      "name": "web",
+      "type": "node",
+      "start": "npm run start",
+      "buildCommand": "npm run build",
+      "installCommand": "npm ci",
+      "env": {
+        "OPENAI_API_KEY": "@OPENAI_API_KEY",
+        "OPENAI_MODEL": "gpt-5.1",
+        "PORT": "3000"
+      },
+      "ports": [3000]
+    }
+  ]
+}
