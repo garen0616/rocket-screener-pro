@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev -p 3000",
     "build": "next build",
-    "start": "next start -p 3000",
+    "start": "next start -p ${PORT:-3000}",
     "lint": "eslint",
     "test:api": "node -e \"(async()=>{const r=await fetch('http://localhost:3000/api/score',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({ticker:'NVDA',asOf:'2024-12-31',question:'請完整填寫分項分數與五個目標價，並產出最近四季財報重點與股票影響'})});console.log(await r.text())})()\""
   },
